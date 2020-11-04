@@ -23,7 +23,7 @@ async function newestAnnoucement() {
 
 let lastAnnouce = require('./store.json')
 
-const cronJob = new CronJob('0 */1 * * * *', async() => {
+const cronJob = new CronJob('0 */10 * * * *', async() => {
 	console.log('[Scrapping] Checking for new Annoucement...')
 
 	const annouce = await newestAnnoucement()
